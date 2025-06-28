@@ -56,6 +56,8 @@ options.add_argument("--disable-infobars")
 options.add_argument("--start-maximized")
 options.add_argument("--disable-extensions")
 
+
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get(URL)
 

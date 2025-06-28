@@ -22,7 +22,6 @@ class TrianglePage:
         btn.click()
 
     def get_result(self):
-        # Лучше подождать появления текста, чтобы не ловить пустое значение
-        wait = WebDriverWait(self.driver, 6)
+        wait = WebDriverWait(self.driver, 1)
         wait.until(lambda d: d.find_element(By.CLASS_NAME, "info").text.strip() != "")
         return self.driver.find_element(By.CLASS_NAME, "info").text.strip()
